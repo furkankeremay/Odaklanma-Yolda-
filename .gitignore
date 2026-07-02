@@ -1,0 +1,17 @@
+# Bağımlılıklar ve Derleme Çıktıları
+node_modules/
+dist/
+build/
+coverage/
+
+# Yerel Veritabanı (Çok Kritik!)
+sqlite.db
+sqlite.db-journal
+
+# Çevre Değişkenleri (Gizli Şifreler ve API Keyler)
+.env*
+!.env.example
+
+# Sistem ve Log Dosyaları
+*.log
+.DS_Store

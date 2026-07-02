@@ -1,0 +1,6 @@
+{
+  "name": "Odaklanma Yoldasi",
+  "description": "Odaklanma sürelerinizi yöneten, sizi motive eden ve çalışma süreçlerinizde her zaman yanınızda olan destekleyici bir odaklanma yoldaşı.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
