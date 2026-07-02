@@ -3,7 +3,7 @@ import path from "path";
 import dotenv from "dotenv";
 import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
-import { db } from "./src/db/index.ts";
+import { db, initDb } from "./src/db/index.ts";
 import { profiles, denemeler } from "./src/db/schema.ts";
 import { requireAuth, generateToken } from "./src/middleware/auth.ts";
 import type { AuthRequest } from "./src/middleware/auth.ts";
@@ -533,6 +533,8 @@ app.get("/api/rankings", requireAuth, async (req: AuthRequest, res) => {
 });
 
 async function startServer() {
+  await initDb();
+
   // Vite integration
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
